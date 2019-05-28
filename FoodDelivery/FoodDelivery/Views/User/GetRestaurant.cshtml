@@ -1,0 +1,13 @@
+﻿@model Restaurant
+<div>
+    <h4>@Model.Name</h4>
+    @foreach (var p in Model.Menu)
+    {
+        <h4>@p.Name</h4>
+        <h4>@p.Description</h4>
+        <h4>@p.Cost</h4>
+        <button type="button" class="bubbly-button" onclick="location.href = '@Url.Action("AddToBasket", "User", new {id = p.Id})'">
+            <h4>Add to Basket</h4>
+        </button>
+    }
+</div>

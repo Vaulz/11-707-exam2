@@ -1,0 +1,12 @@
+﻿<!DOCTYPE html>
+<div class="centerWindow">
+    <h1>Welcome to Food Delivery</h1>
+    <p>Login to access Food Delivery.</p>
+    @using (Html.BeginForm("Login", "User", FormMethod.Post))
+    {
+        <p><input type="text" class="searchbar" name="login" placeholder="login" required /></p>
+        <p><input type="password" class="searchbar" name="password" placeholder="password" required /></p>
+        <p><input type="submit" class="bubbly-button" value="Login"></p>
+    }
+    <p><input type="button" class="bubbly-button" value="Register" onclick='location.href = "Home/RegisterPage"'></p>
+</div>

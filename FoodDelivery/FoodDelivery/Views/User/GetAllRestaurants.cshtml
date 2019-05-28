@@ -1,0 +1,12 @@
+﻿@model List<Restaurant>
+@foreach (var p in Model)
+{
+    <div>
+        <h4>@p.Name</h4>
+        <p>
+            <button type="button" class="bubbly-button" onclick="location.href = '@Url.Action("GetRestauraunt", "User", new {id = p.Id}, null)'">
+                <h4>To Restaurant</h4>
+            </button>
+        </p>
+    </div>
+}
